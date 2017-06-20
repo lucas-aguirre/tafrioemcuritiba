@@ -4,9 +4,9 @@
  */
 
 (function (window, document) {
-  const APIKEY = 'd5755d9701a1ad27afd26532550a12d7'
+  const APIKEY = 'cce02f3a5bf240c7869131951171904'
   const CITY = 'Curitiba'
-  const API = `//api.openweathermap.org/data/2.5/weather?q=${CITY}&units=metric&APPID=${APIKEY}`
+  const API = `https://api.apixu.com/v1/current.json?key=${APIKEY}&q=${CITY}`
   const answer = {
     text: document.querySelector('.app-answer > p'),
     emoji: document.querySelector('.app-answer > span')
@@ -37,7 +37,7 @@
       return false
     }
 
-    if (response.main.temp < 15) {
+    if (response.current.temp_c < 15) {
       answer.text.innerText = 'Sim'
       answer.emoji.innerText = '😀'
     } else {
