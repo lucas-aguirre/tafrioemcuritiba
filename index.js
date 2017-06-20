@@ -34,16 +34,18 @@
       answer.text.innerText = 'Ops'
       answer.emoji.innerText = '❌'
 
-      return false
+      return
     }
 
-    if (response.current.temp_c < 15) {
-      answer.text.innerText = 'Sim'
-      answer.emoji.innerText = '😀'
-    } else {
+    if (response.current.temp_c > 15) {
       answer.text.innerText = 'Não'
       answer.emoji.innerText = '😞'
+
+      return
     }
+
+    answer.text.innerText = 'Sim'
+    answer.emoji.innerText = '😀'
   }
 
   /*
