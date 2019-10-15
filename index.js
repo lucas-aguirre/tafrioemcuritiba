@@ -6,7 +6,7 @@
 (function (window, document) {
   const APIKEY = '646ce248e546f9da4b05c47df7c7ce15'
   const CITY = 'Curitiba'
-  const API = `http://api.weatherstack.com/current?access_key=${APIKEY}&query=${CITY}`
+  const API = `https://api.weatherstack.com/current?access_key=${APIKEY}&query=${CITY}`
   const answer = {
     text: document.querySelector('.app-answer > p'),
     emoji: document.querySelector('.app-answer > span')
