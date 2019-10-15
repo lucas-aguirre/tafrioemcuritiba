@@ -4,9 +4,9 @@
  */
 
 (function (window, document) {
-  const APIKEY = '646ce248e546f9da4b05c47df7c7ce15'
+  const APIKEY = 'd5755d9701a1ad27afd26532550a12d7'
   const CITY = 'Curitiba'
-  const API = `http://api.weatherstack.com/current?access_key=${APIKEY}&query=${CITY}`
+  const API = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&APPID=${APIKEY}`
   const answer = {
     text: document.querySelector('.app-answer > p'),
     emoji: document.querySelector('.app-answer > span')
