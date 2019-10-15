@@ -4,9 +4,9 @@
  */
 
 (function (window, document) {
-  const APIKEY = 'cce02f3a5bf240c7869131951171904'
+  const APIKEY = '646ce248e546f9da4b05c47df7c7ce15'
   const CITY = 'Curitiba'
-  const API = `https://api.apixu.com/v1/current.json?key=${APIKEY}&q=${CITY}`
+  const API = `http://api.weatherstack.com/current?access_key=${APIKEY}&query=${CITY}`
   const answer = {
     text: document.querySelector('.app-answer > p'),
     emoji: document.querySelector('.app-answer > span')
@@ -21,7 +21,7 @@
       .then((response) => {
         updateAnswer(response)
       })
-      .catch((error) => {
+      .catch(() => {
         updateAnswer()
       })
   }
@@ -37,7 +37,7 @@
       return
     }
 
-    if (response.current.temp_c > 15) {
+    if (response.current.temperature > 15) {
       answer.text.innerText = 'Não'
       answer.emoji.innerText = '😞'
 
