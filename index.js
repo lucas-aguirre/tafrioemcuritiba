@@ -37,7 +37,7 @@
       return
     }
 
-    if (response.current.temperature > 15) {
+    if (response.main.temp > 15) {
       answer.text.innerText = 'Não'
       answer.emoji.innerText = '😞'
 
