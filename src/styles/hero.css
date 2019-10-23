@@ -1,0 +1,25 @@
+
+.hero {
+  background: #fff4f4;
+  height: 100vh;
+  overflow: hidden;
+  padding: 16rem 12rem;
+  position: relative;
+  width: 100%;
+}
+
+.hero__title {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 5.6rem;
+  margin: 0;
+  position: relative;
+}
+
+.hero__loading {
+  bottom: -120px;
+  position: absolute;
+  right: -420px;
+  transform-origin: bottom;
+  transform: rotate(-29deg);
+  width: 800px;
+}
