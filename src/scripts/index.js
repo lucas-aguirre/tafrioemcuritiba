@@ -1,13 +1,19 @@
-import { animateHeroTitle, animateHeroLoading, hideHeroLoading } from './hero'
+import { animateHeroTitle, animateHeroLoading, hideHeroTitle, hideHeroLoading } from "./hero";
+import { fetchWeather } from "./services/fetchWeather";
 
 // Styles
-import './styles'
+import "./styles";
 
-window.addEventListener('DOMContentLoaded', () => {
-  animateHeroTitle('#title')
-  animateHeroLoading('#loading')
+window.addEventListener("DOMContentLoaded", () => {
+  animateHeroTitle("#title");
+  animateHeroLoading("#loading");
 
-  setTimeout(() => {
-    hideHeroLoading('#loading')
-  }, 3000)
-})
+  console.log(new Date())
+
+  // Fetch
+  fetchWeather()
+  .then(weather => {
+    hideHeroLoading("#loading");
+    hideHeroTitle("#title");
+  })
+}); 

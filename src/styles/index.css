@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: #cf536d;
+  color: #ffffff;
+}
+
 html,
 body {
   color: rgba(0, 0, 0, 0.72);
